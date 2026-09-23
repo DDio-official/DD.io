@@ -16,3 +16,45 @@ rows.forEach((row, index) => {
     name.textContent = (player ? player.name : null) || 'Anonymous';
     money.textContent = `${(player ? player.money : null) || 0} $`;
 });
+
+const buttonPlay = document.getElementById('buttonPlay');
+const popUpPseudo = document.getElementById('popUpPseudo');
+buttonPlay.addEventListener('click', function(){
+    if (!caseHTP.checked && !caseTerms.checked == true) {
+        alert('you need to check the 2 boxes first 😉')
+        return;
+    }
+    popUpPseudo.style.display = 'flex';
+})
+
+const closebtn = document.getElementById('close');
+closebtn.addEventListener('click', function(){
+    popUpPseudo.style.display = 'none';
+})
+
+const caseHTP = document.getElementById('caseHTP');
+const caseTerms = document.getElementById('caseTerms');
+const savedUsername = localStorage.getItem('ddio_username');
+if (savedUsername) {
+    if (caseHTP) { caseHTP.checked = true; caseHTP.disabled = true; }
+    if (caseTerms) { caseTerms.checked = true; caseTerms.disabled = true; }
+    if (buttonPlay) { buttonPlay.textContent = `Play (${savedUsername})`; }
+} else {
+    buttonPlay.textContent = ('Play and login')
+}
+const PseudoBoutonOk = document.getElementById('PseudoBoutonOk');
+const ChooseName = document.getElementById('ChooseName');
+PseudoBoutonOk.addEventListener('click', function(){
+    console.log('OK')
+    const ChosenName = ChooseName.value.trim();
+    localStorage.setItem('ddio_username', ChosenName);
+    alert(`profile saved as: ${ChosenName}`)
+    window.location.reload();
+})
+
+const logOutButton = document.getElementById('logOutButton');
+logOutButton.addEventListener('click', function(){
+    localStorage.removeItem('ddio_username')
+    alert(`Success action, you are now disconnected`)
+    window.location.reload();
+})
