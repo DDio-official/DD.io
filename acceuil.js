@@ -24,7 +24,8 @@ buttonPlay.addEventListener('click', function(){
         alert('you need to check the 2 boxes first 😉')
         return;
     }
-    if (savedUsername) {
+    const checkUser = localStorage.getItem('ddio_username');
+    if (checkUser) {
         window.location.href = 'https://ddio-official.github.io/game/'
         return;
     }
