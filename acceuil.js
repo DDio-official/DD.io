@@ -1,5 +1,5 @@
 let player = null; 
-
+const savedUsername = localStorage.getItem('ddio_username');
 const rows = document.querySelectorAll('.leaderboard-row');
 
 rows.forEach((row, index) => {
@@ -38,7 +38,6 @@ closebtn.addEventListener('click', function(){
 
 const caseHTP = document.getElementById('caseHTP');
 const caseTerms = document.getElementById('caseTerms');
-const savedUsername = localStorage.getItem('ddio_username');
 if (savedUsername) {
     if (caseHTP) { caseHTP.checked = true; caseHTP.disabled = true; }
     if (caseTerms) { caseTerms.checked = true; caseTerms.disabled = true; }
