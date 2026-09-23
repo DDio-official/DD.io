@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desciption" conten="A funny game with Dice, need brain and luck">
+    <!-- section pour lier l'icone et le css -->
+    <link rel="icon" type="image/png" href="./dé.png">
+    <link rel="stylesheet" href="acceuil.css">
+    <title>DD.io</title>
+</head>
+<body>
+    <div>
+        <!-- La fieldset a gauche les termes et règles -->
+        <fieldset id="Terms">
+            <legend>Terms and rules</legend>
+            <ul>
+                <li>I am not a pro, the game can have bugs</li>
+                <li>Please don't paste userscripts who give you boost(s)</li>
+                <li>Don't spam | annoy | hurst anybody</li>
+            </ul>
+            <!-- Une des 2 checkbox -->
+            <label>
+                <input type="checkbox" class="verfiy"> I agree with the rules and terms
+            </label>
+        </fieldset>
+    </div>
+    <div>
+        <!-- La fieldset a droite comment jouer -->
+        <fieldset id="HTP">
+            <legend>How to play ?</legend>
+            <ul>
+                <li>The goal is easy: buy the best die</li>
+                <li>You start with 3 dice: 0;1 and 2</li>
+                <li>You will keep 0 all the game</li>
+                <li>The max number is 6 dice</li>
+                <li>You will buy better dice in game ex 0;1;2;3;4;5 or 0;25;26;27;28;29</li>
+                <li>You roll a die and earn the number in points</li>
+                <li>You can choose if you want to:
+                    <ul>
+                        <li>Convert in xp and earn the middle in $</li>
+                        <li>Try to have better score</li>
+                    </ul>
+                </li>
+                <li>⚠️ If you got a 0 you loose all your points not converts ⚠️</li>
+                <li>If you got 5x a number other than 0 you earn +0.1x points for each die after</li>
+                <li>You can buy many boosts in the shop !</li>
+            </ul>
+            <!-- Une des 2 checkbox -->
+            <label>
+                <input type="checkbox" class="verfiy"> I saw how to play     
+            </label>
+        </fieldset>
+    </div>
+    <!-- Faire le bouton de play -->
+    <div>
+        <button id="buttonPlay">Play</button>
+    </div>
+    <!-- Faire le pop up pseudo -->
+    <div id="popUpPseudo">
+         <div id="headerPseudo">
+            <span>Choose a Pseudo for the game</span>
+            <button id="close" class="closeBtn">&times;</button>
+         </div>
+         <div id="PseudoContent">
+            <span><input type="text" id="ChooseName" placeholder="Type your name here"></span>
+            <button id="PseudoBoutonOk">OK</button>
+            <p>⚠️ Be careful, you can only change your name with in-game money</p>
+         </div>
+    </div>
+    <!-- Faire le leaderboard -->
+     <div id="leaderboard">
+        <fieldset>
+            <legend>🏆 Leaderboard</legend>
+            <div class="leaderboard-row">
+                <fieldset>
+                    <span class="rank">#1</span>
+                    <img class="pdp" src="" alt="pdp">
+                    <span class="lvl"></span>
+                    <span class="name"></span>
+                    <span class="money"></span>
+                </fieldset>
+            </div>
+            <div class="leaderboard-row">
+                <fieldset>
+                    <span class="rank">#2</span>
+                    <img class="pdp" src="" alt="pdp">
+                    <span class="lvl"></span>
+                    <span class="name"></span>
+                    <span class="money"></span>
+                </fieldset>
+            </div>
+            <div class="leaderboard-row">
+                <fieldset>
+                    <span class="rank">#3</span>
+                    <img class="pdp" src="" alt="pdp">
+                    <span class="lvl"></span>
+                    <span class="name"></span>
+                    <span class="money"></span>
+                </fieldset>
+            </div>
+            <div class="leaderboard-row">
+                <fieldset>
+                    <span class="rank">#4</span>
+                    <img class="pdp" src="" alt="pdp">
+                    <span class="lvl"></span>
+                    <span class="name"></span>
+                    <span class="money"></span>
+                </fieldset>
+            </div>
+            <div class="leaderboard-row">
+                <fieldset>
+                    <span class="rank">#5</span>
+                    <img class="pdp" src="" alt="pdp">
+                    <span class="lvl"></span>
+                    <span class="name"></span>
+                    <span class="money"></span>
+                </fieldset>
+            </div>
+        </fieldset>
+     </div>
+    <!-- Faire la section logout --> 
+     <div id="SectionLogout">
+        <fieldset>
+            <span>Tired of this account ? Made Another !</span>
+            <button id="logOutButton">log out</button>
+        </fieldset>
+     </div>
+
+    <!-- Lier le js -->
+    <script src="acceuil.js"></script>
+</body>
+</html>

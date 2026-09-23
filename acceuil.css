@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #464444;
+    color: white;
+}
+
+#Terms, #HTP {
+    background-color: #3a3737;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+}
+
+#Terms {
+    top: 15px;
+    left: 15px;
+}
+
+#HTP {
+    top: 15px;
+    right: 15px;
+}
+
+#buttonPlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+}
+
+#leaderboard {
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+}
+
+#popUpPseudo {
+    display: none;
+}
+
+#SectionLogout {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
