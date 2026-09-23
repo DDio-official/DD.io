@@ -24,6 +24,10 @@ buttonPlay.addEventListener('click', function(){
         alert('you need to check the 2 boxes first 😉')
         return;
     }
+    if (savedUsername) {
+        window.location.href = 'https://ddio-official.github.io/game/'
+        return;
+    }
     popUpPseudo.style.display = 'flex';
 })
 
@@ -45,9 +49,6 @@ if (savedUsername) {
 const PseudoBoutonOk = document.getElementById('PseudoBoutonOk');
 const ChooseName = document.getElementById('ChooseName');
 PseudoBoutonOk.addEventListener('click', function(){
-    if (savedUsername) {
-        window.location.href = 'https://ddio-official.github.io/game/'
-    }
     const ChosenName = ChooseName.value.trim();
     localStorage.setItem('ddio_username', ChosenName);
     alert(`profile saved as: ${ChosenName}`)
