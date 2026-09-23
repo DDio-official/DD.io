@@ -45,7 +45,9 @@ if (savedUsername) {
 const PseudoBoutonOk = document.getElementById('PseudoBoutonOk');
 const ChooseName = document.getElementById('ChooseName');
 PseudoBoutonOk.addEventListener('click', function(){
-    console.log('OK')
+    if (savedUsername) {
+        window.location.href = 'https://ddio-official.github.io/game/'
+    }
     const ChosenName = ChooseName.value.trim();
     localStorage.setItem('ddio_username', ChosenName);
     alert(`profile saved as: ${ChosenName}`)
